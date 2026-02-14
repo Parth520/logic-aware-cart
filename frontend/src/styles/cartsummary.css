@@ -1,0 +1,106 @@
+/* styles/CartSummary.css */
+
+.cart-summary {
+    margin: 0 var(--space-5);
+    border: var(--border);
+    overflow: hidden;
+}
+
+.summary-title {
+    font-family: var(--font-display);
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--muted);
+    padding: var(--space-3) var(--space-4);
+    background: var(--ink-3);
+    border-bottom: var(--border);
+}
+
+.summary-lines {
+    display: flex;
+    flex-direction: column;
+    background: var(--ink);
+}
+
+.summary-line {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: var(--space-2) var(--space-4);
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    color: var(--muted);
+    border-bottom: 1px solid var(--ink-3);
+    gap: var(--space-3);
+}
+
+.summary-line span:first-child {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.summary-line small {
+    font-size: 0.65rem;
+    opacity: 0.6;
+    font-family: var(--font-mono);
+}
+
+.summary-line code {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    background: var(--ink-3);
+    padding: 1px 4px;
+    color: var(--amber);
+}
+
+
+/* Discount lines */
+
+.summary-line--discount {
+    color: var(--green);
+}
+
+.summary-line--after-discount {
+    color: var(--cream-2);
+    font-weight: 500;
+}
+
+
+/* Tax line */
+
+.summary-line--tax {
+    color: #a0906e;
+}
+
+
+/* Total line */
+
+.summary-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--space-4);
+    background: var(--ink-3);
+    border-top: 2px solid var(--amber);
+}
+
+.summary-total span:first-child {
+    font-family: var(--font-display);
+    font-size: 0.7rem;
+    font-weight: 800;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--muted);
+}
+
+.total-amount {
+    font-family: var(--font-mono);
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: var(--amber) !important;
+    letter-spacing: -0.01em;
+}

@@ -1,0 +1,323 @@
+/* styles/global.css */
+
+
+/* ============================================================
+   CARTIS — Industrial Brutalist Design System
+   Palette: Near-black + warm amber + off-white
+   Type: Syne (display) + DM Mono (data)
+   ============================================================ */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    /* Colors */
+    --ink: #0e0d0b;
+    --ink-2: #1c1a17;
+    --ink-3: #2e2b27;
+    --amber: #e8a020;
+    --amber-dim: #c4851a;
+    --amber-glow: rgba(232, 160, 32, 0.12);
+    --cream: #f5f0e8;
+    --cream-2: #ede7db;
+    --muted: #7a7469;
+    --muted-2: #4a4540;
+    --white: #ffffff;
+    --red: #d94f3d;
+    --green: #4caf82;
+    --blue: #4a8fd4;
+    /* Typography */
+    --font-display: 'Syne', sans-serif;
+    --font-mono: 'DM Mono', monospace;
+    /* Spacing */
+    --space-1: 4px;
+    --space-2: 8px;
+    --space-3: 12px;
+    --space-4: 16px;
+    --space-5: 24px;
+    --space-6: 32px;
+    --space-7: 48px;
+    --space-8: 64px;
+    /* Borders */
+    --border: 1px solid var(--ink-3);
+    --border-amber: 1px solid var(--amber);
+    --radius: 0px;
+    /* Brutalist: no rounding */
+    --radius-sm: 2px;
+    /* Shadows */
+    --shadow-card: 4px 4px 0px var(--ink-3);
+    --shadow-card-hover: 6px 6px 0px var(--amber);
+    --shadow-cart: -4px 0 24px rgba(0, 0, 0, 0.5);
+    /* Transitions */
+    --transition: 150ms ease;
+    --transition-slow: 300ms ease;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-mono);
+    background-color: var(--ink);
+    color: var(--cream);
+    line-height: 1.5;
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+    /* Subtle noise texture overlay */
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+}
+
+button {
+    cursor: pointer;
+    font-family: var(--font-display);
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    border: none;
+    outline: none;
+    transition: var(--transition);
+}
+
+button:focus-visible {
+    outline: 2px solid var(--amber);
+    outline-offset: 2px;
+}
+
+input {
+    font-family: var(--font-mono);
+    outline: none;
+}
+
+
+/* ── App Layout ── */
+
+.app {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* ── Header ── */
+
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--ink);
+    border-bottom: 2px solid var(--amber);
+}
+
+.header-inner {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: var(--space-4) var(--space-6);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: baseline;
+    gap: var(--space-3);
+}
+
+.logo-mark {
+    font-size: 1.4rem;
+    color: var(--amber);
+    font-family: var(--font-display);
+}
+
+.logo-text {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    color: var(--cream);
+}
+
+.logo-sub {
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    color: var(--muted);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.cart-toggle {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    background: transparent;
+    border: var(--border);
+    color: var(--cream);
+    padding: var(--space-2) var(--space-4);
+    font-size: 0.85rem;
+    letter-spacing: 0.06em;
+    position: relative;
+    transition: var(--transition);
+}
+
+.cart-toggle:hover {
+    border-color: var(--amber);
+    color: var(--amber);
+}
+
+.cart-icon {
+    font-size: 1.1rem;
+}
+
+.cart-badge {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    width: 20px;
+    height: 20px;
+    background: var(--amber);
+    color: var(--ink);
+    font-size: 0.7rem;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-display);
+}
+
+
+/* ── Main layout ── */
+
+.main-layout {
+    flex: 1;
+    max-width: 1400px;
+    margin: 0 auto;
+    width: 100%;
+    padding: var(--space-7) var(--space-6);
+}
+
+.products-section {
+    width: 100%;
+}
+
+.section-header {
+    margin-bottom: var(--space-7);
+    border-left: 4px solid var(--amber);
+    padding-left: var(--space-5);
+}
+
+.section-title {
+    font-family: var(--font-display);
+    font-size: 3rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    line-height: 1;
+    text-transform: uppercase;
+    color: var(--cream);
+}
+
+.section-subtitle {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--muted);
+    margin-top: var(--space-2);
+    letter-spacing: 0.06em;
+}
+
+
+/* ── Cart panel (slide-in) ── */
+
+.cart-panel {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 420px;
+    max-width: 100vw;
+    background: var(--ink-2);
+    border-left: 2px solid var(--amber);
+    z-index: 200;
+    transform: translateX(100%);
+    transition: transform var(--transition-slow);
+    overflow-y: auto;
+    box-shadow: var(--shadow-cart);
+}
+
+.cart-panel.is-open {
+    transform: translateX(0);
+}
+
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(14, 13, 11, 0.7);
+    z-index: 150;
+    backdrop-filter: blur(2px);
+}
+
+
+/* ── Loading / Error states ── */
+
+.loading-state,
+.error-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-4);
+    padding: var(--space-8);
+    color: var(--muted);
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+}
+
+.spinner {
+    width: 32px;
+    height: 32px;
+    border: 2px solid var(--ink-3);
+    border-top-color: var(--amber);
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.error-state {
+    border: var(--border);
+    padding: var(--space-6);
+    max-width: 480px;
+}
+
+.error-hint {
+    color: var(--amber);
+    font-size: 0.75rem;
+}
+
+
+/* ── Responsive ── */
+
+@media (max-width: 768px) {
+    .header-inner {
+        padding: var(--space-3) var(--space-4);
+    }
+    .main-layout {
+        padding: var(--space-5) var(--space-4);
+    }
+    .section-title {
+        font-size: 2rem;
+    }
+    .cart-panel {
+        width: 100vw;
+    }
+    .logo-sub {
+        display: none;
+    }
+}

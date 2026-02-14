@@ -1,0 +1,81 @@
+[{
+        "id": "laptop-pro",
+        "name": "Laptop Pro 15",
+        "price": 1199.99,
+        "category": "Electronics",
+        "description": "16GB RAM, 512GB SSD, 15-inch display",
+        "image": "💻"
+    },
+    {
+        "id": "wireless-headphones",
+        "name": "Studio Headphones",
+        "price": 249.99,
+        "category": "Electronics",
+        "description": "Noise-cancelling, 40hr battery life",
+        "image": "🎧"
+    },
+    {
+        "id": "wired-mouse",
+        "name": "Wired Mouse",
+        "price": 50,
+        "category": "Peripherals",
+        "description": "Ergonomic design, 6 programmable buttons",
+        "image": "🖱️"
+    },
+    {
+        "id": "mechanical-keyboard",
+        "name": "Mechanical Keyboard",
+        "price": 129.99,
+        "category": "Peripherals",
+        "description": "TKL layout, Cherry MX Blue switches",
+        "image": "⌨️"
+    },
+    {
+        "id": "usb-hub",
+        "name": "7-Port USB Hub",
+        "price": 39.99,
+        "category": "Accessories",
+        "description": "USB-C & USB-A ports, fast charging",
+        "image": "🔌"
+    },
+    {
+        "id": "monitor-stand",
+        "name": "Adjustable Monitor Stand",
+        "price": 79.99,
+        "category": "Accessories",
+        "description": "Height-adjustable, cable management",
+        "image": "🖥️"
+    },
+    {
+        "id": "webcam-4k",
+        "name": "4K Webcam",
+        "price": 199.99,
+        "category": "Electronics",
+        "description": "4K 30fps, built-in ring light",
+        "image": "📷"
+    },
+    {
+        "id": "desk-lamp",
+        "name": "Smart Desk Lamp",
+        "price": 89.99,
+        "category": "Accessories",
+        "description": "Touch control, USB charging port",
+        "image": "💡"
+    },
+    {
+        "id": "laptop-sleeve",
+        "name": "Laptop Sleeve 15\"",
+        "price": 34.99,
+        "category": "Accessories",
+        "description": "Water-resistant, memory foam lining",
+        "image": "👜"
+    },
+    {
+        "id": "external-ssd",
+        "name": "External SSD 1TB",
+        "price": 119.99,
+        "category": "Peripherals",
+        "description": "USB-C, read 1050MB/s write 1000MB/s",
+        "image": "💾"
+    }
+]
