@@ -1,7 +1,7 @@
 [{
         "id": "laptop-pro",
         "name": "Laptop Pro 15",
-        "price": 1199.99,
+        "price": 1200.00,
         "category": "Electronics",
         "description": "16GB RAM, 512GB SSD, 15-inch display",
         "image": "💻"
